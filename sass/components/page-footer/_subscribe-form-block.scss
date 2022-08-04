@@ -1,0 +1,55 @@
+.subscribe-form {
+    display: flex;
+    align-items: flex-end;
+}
+
+.subscribe-form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form__label {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: $secondaryTextColor;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+}
+
+.subscribe-form__input {
+    padding: 15px 16px;
+    margin-right: 12px;
+
+    width: 358px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: inherit;
+
+    color: $secondaryTextColor;
+
+    font-family: inherit;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::placeholder {
+        color: $additionalSecondaryTextColor;
+
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+
+    }
+
+    .subscribe-form__field:focus-within & {
+        border-color: $accentColor;
+        outline: none;
+    }
+
+}
