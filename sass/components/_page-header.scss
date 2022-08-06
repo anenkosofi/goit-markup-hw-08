@@ -1,4 +1,5 @@
 .page-header {
+    position: relative;
     border-bottom: 1px solid $line;
     
     &--border {
@@ -7,12 +8,31 @@
 }
 
 .page-header__container {
-    display: flex;
-    align-items: center;        
+    @media screen and (max-width: 767px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+           
 }
 
 .site-nav {
-    margin-left: 93px;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
+        margin-left: 87px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
 }
 
 .site-nav__list {
@@ -22,8 +42,15 @@
 .site-nav__item {
     position: relative;
 
-    &:not(:last-child) {
-        margin-right: 40px;
+    @media screen and (min-width: 768px) {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
     }
 }
 
@@ -32,7 +59,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
-    color: inherit;
+    color: $additionalPrimaryTextColor;
     
     font-weight: 500;
     font-size: 14px;
@@ -66,14 +93,27 @@
 }
 
 .contact-nav-list {
-    display: flex;
-    margin-left: auto;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .contact-nav-list__item {
-
-    &:not(:last-child) {
-        margin-right: 50px;
+    @media screen and (max-width: 1199px) {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
     }
 }
 
@@ -97,7 +137,11 @@
 }
 
 .contact-nav-list__icon {
-    margin-right: 10px;
-
+    @media screen and (min-width: 768px) {
+       margin-right: 8px; 
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 10px;
+    }
     fill: currentColor;
 }

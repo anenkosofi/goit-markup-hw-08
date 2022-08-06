@@ -3,8 +3,7 @@
     top: 50%;
     left: 50%;
 
-    min-width: 528px;
-    min-height: 581px;
+    width: 320px;
 
     opacity: 1;
 
@@ -20,6 +19,14 @@
     .backdrop.is-hidden & {
         opacity: 0;
         transform: translate(-50%, -50%) scale(1.1);
+    }
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        height: 609px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
     }
 }
 
