@@ -3,8 +3,6 @@
     top: 50%;
     left: 50%;
 
-    width: 320px;
-
     opacity: 1;
 
     padding: 40px;
@@ -19,6 +17,18 @@
     .backdrop.is-hidden & {
         opacity: 0;
         transform: translate(-50%, -50%) scale(1.1);
+    }
+    @media screen and (max-width: 349px) {
+        width: 320px;
+        height: 568px;
+        
+        padding: 20px;
+    }
+    @media screen and (min-width: 350px) and (max-width: 479px) {
+        width: 340px;
+        height: 609px;
+
+        padding: 30px;
     }
     @media screen and (min-width: 480px) {
         width: 450px;

@@ -96,10 +96,17 @@
     color: $accentColor;
 
     font-weight: 500;
-    font-size: 34px;
     line-height: 1.18;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    @media screen and (max-width: 379px) {
+        font-size: 24px;
+    }
+    
+    @media screen and (min-width: 380px) {
+        font-size: 34px;
+    }
 }
 .contact-menu-list__mail-link {
     color: inherit;
@@ -119,10 +126,10 @@
     position: relative;
 }
 .social-menu-list__link {
+    
     color: $accentColor;
 
     font-weight: 500;
-    font-size: 18px;
     line-height: 1.22;    
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -136,5 +143,21 @@
         width: 1px;
         height: 22px;
         background-color: rgba(33, 33, 33, 0.2);
+        
+    }
+    @media screen and (max-width: 337px) {
+        font-size: 10px;
+    }
+    @media screen and (min-width: 338px) {
+        font-size: 12px;
+    }
+    @media screen and (min-width: 371px) {
+        font-size: 14px;
+    }
+    @media screen and (min-width: 404px) {
+        font-size: 16px;
+    }
+    @media screen and (min-width: 440px) {
+        font-size: 18px;
     }
 }
